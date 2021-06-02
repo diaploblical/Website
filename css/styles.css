@@ -1,0 +1,64 @@
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px !important;
+  }
+  .row {
+    padding: 0 0 20px 0 !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 14px !important;
+  }
+  .row {
+    padding: 0 0 15px 0 !important;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  html {
+    font-size: 14px !important;
+  }
+  .row {
+    padding: 0 0 10px 0 !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 15px !important;
+  }
+  .row {
+    padding: 0 0 5px 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 15px !important;
+  }  
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: static;
+}
+
+.parallax {
+  background-image: url("../assets/repeater.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #6d7285;
+}
+
+.dead-center {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  text-align: center;
+}
