@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
     <section id="home">
-      <div class="parallax main">
-        
+      <div class="parallax-container valign-wrapper">
+        <h3 class="hide-on-med-and-down">Egeh Egeh's website</h3>
+        <h4 class="hide-on-large-only">Egeh Egeh's website</h4>
+        <div class="parallax">
+          <img src="assets/parallax.jpg"/>
+        </div>
       </div>
     </section>
     <section id="portfolio">
       <div class="container">
-        <div class="red">
-          
+        <div class="row">
+          <div class="left col s12 l4">
+            <img class="responsive-img valign-wrapper" src="assets/placeholder.svg">
+          </div>
+          <div class="right col s12 l8">
+            <h5 class="center-align">Quote Generator </h5>
+            <p>Quote Generator is, as the name suggests, a quote generator. It pulls quotes via API calls from www.placeholder.com</p>
+            <a id="qgGithub"class="btn blue darken-4">View Code</a>
+            <a id="qgLive" class="btn blue darken-4 disabled">Live App</a>
+          </div> 
         </div>
-        <div class="blue">
-          
-        </div>
-        <div class="green">
-          
-        </div>
-        <div class="blue">
-          
+        <div class="row">
+          <div class="right col s12 l4">
+            <img class="responsive-img valign-wrapper" src="assets/placeholder.svg">
+          </div>
+          <div class="left col s12 l8">
+            <h5 class="center-align">Test</h5>
+            <p></p>
+          </div>
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="js/materialize-initializer.js"></script>
   </body>
 </html>
