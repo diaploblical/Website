@@ -2,7 +2,9 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,38 +12,123 @@
   <body>
     <section id="home">
       <div class="parallax-container valign-wrapper">
-        <h3 class="hide-on-med-and-down">Egeh Egeh's website</h3>
-        <h4 class="hide-on-large-only">Egeh Egeh's website</h4>
+        <div class="row">
+          <h4 class="hide-on-med-and-down white-text center-align">Egeh E<span class="cyan-text">geh</span></h4>
+          <h5 class="hide-on-med-and-down white-text center-align">New graduate and aspiring <span class="cyan-text">full-s</span>tack developer</h5>
+          <h4 class="hide-on-large-only white-text center-align">Eg<span class="cyan-text">eh</span> Egeh</h4>
+          <h5 class="hide-on-large-only white-text center-align">New graduate a<span class="cyan-text">nd a</span>spiring full-stack dev<span class="cyan-text">elop</span>er</h5>
+        </div>     
         <div class="parallax">
-          <img src="assets/parallax.jpg"/>
+          <img src="assets/toronto.png"/>
+        </div>
+        <div class="down-button">
+          <a class="btn-floating btn-large cyan pulse" href="#portfolio"><i class="material-icons">arrow_downward</i></a>
         </div>
       </div>
     </section>
     <section id="portfolio">
       <div class="container">
         <div class="row">
-          <div class="left col s12 l4">
-            <img class="responsive-img valign-wrapper" src="assets/placeholder.svg">
+          <h3 class="center col s12">Projects</h3>
+        </div>
+        <div class="row">
+          <div class="left col s12 l4 animation-container">
+            <div class="animated image">
+              <img class="responsive-img valign-wrapper" src="assets/robot.jpg">
+            </div>
           </div>
-          <div class="right col s12 l8">
-            <h5 class="center-align">Quote Generator </h5>
-            <p>Quote Generator is, as the name suggests, a quote generator. It pulls quotes via API calls from www.placeholder.com</p>
-            <a id="qgGithub"class="btn blue darken-4">View Code</a>
-            <a id="qgLive" class="btn blue darken-4 disabled">Live App</a>
+          <div class="right col s12 l8 animation-container">
+            <div class="animated slidein">
+              <div class="row">
+                <h5 class="">Quote Generator</h5>
+              </div>
+              <div class="row">
+                <div class="chip cyan lighten-4">
+                  JavaScript
+                </div>
+                <div class="chip cyan lighten-4">
+                  React
+                </div>
+                <div class="chip cyan lighten-4">
+                  MaterializeCSS
+                </div>
+              </div>
+              <div class="row">
+                <a id="qgGithub"class="btn cyan">View Code</a>
+                <a id="qgLive" class="btn cyan disabled">Live App</a>
+              </div>
+            </div>     
           </div> 
         </div>
         <div class="row">
-          <div class="right col s12 l4">
-            <img class="responsive-img valign-wrapper" src="assets/placeholder.svg">
+          <div class="right col s12 l4 animation-container">
+            <div class="animated image">
+              <img class="responsive-img valign-wrapper" src="assets/robot.jpg">
+            </div>
           </div>
-          <div class="left col s12 l8">
-            <h5 class="center-align">Test</h5>
-            <p></p>
+          <div class="left col s12 l8 animation-container">
+            <div class="animated slidein">
+              <div class="row">
+                <h5 class="">Dittogram</h5>
+              </div>
+              <div class="row">
+                <div class="chip cyan lighten-4">
+                  ExpressJS
+                </div>
+                <div class="chip cyan lighten-4">
+                  MongoDB
+                </div>
+                <div class="chip cyan lighten-4">
+                  JavaScript
+                </div>
+                <div class="chip cyan lighten-4">
+                  React
+                </div>
+                <div class="chip cyan lighten-4">
+                  MaterializeCSS
+                </div>
+              </div>
+              <div class="row">
+                <a id="dgGithub"class="btn cyan">View Code</a>
+                <a id="dgLive" class="btn cyan disabled">Live App</a>
+              </div>
+            </div>   
+          </div>
+        </div>
+        <div class="row">
+          <div class="left col s12 l4 animation-container">
+            <div class="animated image">
+              <img class="responsive-img valign-wrapper" src="assets/robot.jpg">
+            </div>
+          </div>
+          <div class="right col s12 l8 animation-container">
+            <div class="animated slidein">
+              <div class="row">
+                <h5 class="">Test</h5>
+              </div>
+              <div class="row">
+                <a id="qgGithub"class="btn cyan">View Code</a>
+                <a id="qgLive" class="btn cyan disabled">Live App</a>
+              </div>     
+            </div>     
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="dark">
+        <div class="container">
+          <div class="row">
+            <h3 class="center white-text col s12">About</h3>
           </div>
         </div>
       </div>
     </section>
+    <section id="footer">
+      <div class="darker">
+
+      </div>
+    </section>
     <script type="text/javascript" src="js/site.js"></script>
-    <script type="text/javascript" src="js/materialize-initializer.js"></script>
   </body>
 </html>
