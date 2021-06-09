@@ -44,7 +44,7 @@ img {
   margin: 20px 0 50px 0 !important;
 }
 
-#home {
+#landing {
   border-bottom: 3px solid #00bcd4;
 }
 
@@ -75,8 +75,10 @@ img {
 
 .dark {
   background-color: #393E3F;
+  padding: 0 0 0 0;
 }
 
-.darker {
-  background-color: #222023;
+.btn-row > a {
+  margin: 0 10px 0 10px;
+  justify-content: center;
 }
