@@ -1,48 +1,41 @@
-.slidein {
-  /* for chrome and safari*/
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-name: slidein;
-  
-  /*for firefox*/
-  -moz-animation-duration: 1s;
-  -moz-animation-delay: 2s;
-  -moz-animation-name: slidein;
-
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-name: slidein;
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@-webkit-keyframes slidein {
+@keyframes fromleft {
   from {
-      margin-left: 100%;
-      width: 1000%;
+    transform: translateX(-100%);
   }
+
   to {
-      margin-left: 0%;
-      width: 100%;
+    transform: translateX(0%);
   }
 }
 
-@-moz-keyframes slidein {
+@keyframes fromright {
   from {
-      margin-left: 100%;
-      width: 1000%;
+    transform: translateX(100%);
   }
+
   to {
-      margin-left: 0%;
-      width: 100%;
+    transform: translateX(0%);
   }
 }
 
-@keyframes slidein {
-  from {
-      margin-left: 100%;
-      width: 1000%;
-  }
-  to {
-      margin-left: 0%;
-      width: 100%;
-  }
+.image {
+  opacity: 0;
+  animation: fadein 3s;
+}
+
+.image.is-visible {
+  opacity: 1;
+}
+
+.from-left.is-visible {
+  animation: fromleft 2s;
+}
+
+.from-right.is-visible {
+  animation: fromright 2s;
 }
