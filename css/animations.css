@@ -23,13 +23,8 @@
   }
 }
 
-.image {
-  opacity: 0;
-  animation: fadein 3s;
-}
-
 .image.is-visible {
-  opacity: 1;
+  animation: fromleft 2s;
 }
 
 .from-left.is-visible {

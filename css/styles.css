@@ -64,7 +64,7 @@ img {
   justify-content: center;
 }
 
-.animation-container {
+.descriptor {
   overflow: hidden;
 }
 
@@ -85,4 +85,8 @@ img {
 
 .material-icons.md-dark { 
   color: rgba(0, 0, 0 ); 
+}
+
+.imz {
+  overflow: hidden;
 }
