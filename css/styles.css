@@ -1,31 +1,53 @@
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 14px !important;
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   html {
-    font-size: 14px !important;
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 768px){
   html {
-    font-size: 14px !important;
+    font-size: 14px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 16px !important;
+    font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 18px !important;
+    font-size: 18px;
   }
+}
+
+:root {
+  --background: image-set(url('/assets/circle2.png') type('image/png'));
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html,
@@ -35,58 +57,57 @@ body {
   scroll-behavior: smooth;
 }
 
+h2 {
+  -webkit-text-stroke: 0.12rem rgb(49, 49, 49); /* width and color */
+  color: #fff;
+}
+
 img {
-  margin: auto;
-  display: inline-block;
+  border-radius: 100rem;
 }
 
-.row {
-  margin: 20px 0 60px 0 !important;
+.main-container {
+  height: 100vh;
+  place-content: center;
 }
 
-#landing {
-  border-bottom: 3px solid #00bcd4;
+.content-box {
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
-#portfolio {
-  margin-top: 30px;
+#background {
+  position: fixed;
+  z-index: -1;
+  filter: blur(clamp(0px, calc(50px * var(--scroll, 0) + -5px), 10px)) brightness(clamp(.7, calc(-.5 * var(--scroll, 0) + .85), .8));
+  inset: -30px;
+  background: linear-gradient(to bottom, rgb(33, 23, 206), rgb(64, 116, 221));
 }
 
-.parallax-container {
-  height: 100vh !important;
-}
-
-.parallax {
-  filter: blur(20px);
-}
-    
-.valign-wrapper{
-  justify-content: center;
-}
-
-.descriptor {
-  overflow: hidden;
-}
-
-.down-button {
-  position: absolute;
-  margin-top: 800px;
+#background2 {
+  position: fixed;
+  z-index: -1;
+  filter: blur(clamp(0px, calc(50px * var(--scroll, 0) + -5px), 10px)) brightness(clamp(.7, calc(-.5 * var(--scroll, 0) + .85), .8));
+  inset: 0.1rem;
+  background: var(--background) center/contain no-repeat;
+  animation: rotator 45s infinite linear;
 }
 
 .dark {
   background-color: #393E3F;
-  padding: 0 0 0 0;
 }
 
-.btn-row > a {
-  margin: 0 10px 0 10px;
-  justify-content: center;
+#portfolio {
+  min-height: 90vh;
+  width: 100%;
 }
 
-.material-icons.md-dark { 
-  color: rgba(0, 0, 0 ); 
-}
-
-.imz {
+.footer {
+  margin-top: 3rem;
   overflow: hidden;
 }

@@ -1,23 +1,19 @@
-M.AutoInit();
 
-const intersectionObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    }
-  });
+
+(window.setScroll = () => document.body.style.setProperty('--scroll', scrollY / innerHeight))();
+['scroll', 'resize'].forEach(e => addEventListener(e, setScroll));
+
+const bg = document.querySelector('#background');
+const scrollStyle = getComputedStyle(document.body);
+
+addEventListener('touchstart', () => bg.style.setProperty('--multiplier', '0'));
+addEventListener('mousemove', ({ clientX, clientY }) => {
+  bg.style.setProperty('--backgroundX', `${20 * (clientX - innerWidth / 2) / innerWidth}px`);
+  bg.style.setProperty('--backgroundY', `${20 * (clientY - innerHeight / 2) / innerHeight}px`);
 });
 
-const elements = [...document.querySelectorAll(".animated")];
-
-elements.forEach((element) => intersectionObserver.observe(element));
-
-var scrollButton = document.querySelector("#scrollButton");
-var portfolioSection = document.querySelector("#portfolio");
-
-function scrollDown(target) {
-  target.scrollIntoView(true);
-}
-
-scrollButton.addEventListener("click", () => {scrollDown(portfolioSection)});
+['mouseenter', 'mouseleave'].forEach(e => document.addEventListener(e, () => {
+    if (e === 'mouseleave') bg.removeAttribute('style');
+    bg.style.transition = 'transform .1s linear';
+    setTimeout(() => bg.style.transition = '', 100);
+}));
